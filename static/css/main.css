@@ -1,0 +1,16 @@
+.codehilite {
+  background-color: #f4f4f4 !important;
+  padding: 10px !important;
+}
+
+h1 {
+  font-size: 24px !important;
+  font-weight: bold !important;
+}
+
+h2 {
+  padding-top: 3rem !important;
+  padding-bottom: 1rem !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+}

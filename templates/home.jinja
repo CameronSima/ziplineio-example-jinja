@@ -1,0 +1,65 @@
+{% extends "base.jinja" %} {% block content %}
+
+  <section class="bg-indigo-600 text-white py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-5xl font-bold">Zipline</h1>
+      <p class="mt-4 text-lg">
+        The lightweight, async web framework designed for speed, flexibility,
+        and simplicity.
+      </p>
+      <a
+        href="#features"
+        class="mt-8 inline-block px-6 py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow hover:bg-gray-100"
+        >Learn More</a
+      >
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-gray-800 text-center">Why Zipline?</h2>
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="bg-white p-6 shadow rounded-lg text-center">
+          <h3 class="text-xl font-semibold text-indigo-600">Asynchronous</h3>
+          <p class="mt-4 text-gray-600">
+            Leverage the power of async for a non-blocking, highly scalable
+            backend.
+          </p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-lg text-center">
+          <h3 class="text-xl font-semibold text-indigo-600">
+            Flexible Routing
+          </h3>
+          <p class="mt-4 text-gray-600">
+            Simple, decorator-based routing to organize your application.
+          </p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-lg text-center">
+          <h3 class="text-xl font-semibold text-indigo-600">
+            Minimal and Fast
+          </h3>
+          <p class="mt-4 text-gray-600">
+            Built for performance, keeping your codebase lean and efficient.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-gray-100 py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-800">Get Started with Zipline</h2>
+      <p class="mt-4 text-lg text-gray-600">
+        Dive into the documentation and build your next project with Zipline.
+      </p>
+      <a
+        href="#"
+        class="mt-8 inline-block px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow hover:bg-indigo-500"
+        >Read the Docs</a
+      >
+    </div>
+  </section>
+
+{% endblock %}

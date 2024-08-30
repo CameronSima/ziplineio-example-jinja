@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %} Zipline Framework</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/static/css/main.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/pygments-css@1.0.0/friendly.min.css" rel="stylesheet">
+    {% endblock %}
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navbar -->
+    {% include 'partials/header.jinja' %}
+
+    <!-- Main Content -->
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    {% include 'partials/footer.jinja' %}
+  </body>
+</html>
