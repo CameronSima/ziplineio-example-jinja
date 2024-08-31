@@ -22,3 +22,5 @@ services:
 networks:
   caddy_net:
     external: false
+  shared_network:
+    external: true
