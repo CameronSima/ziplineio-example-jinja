@@ -2,6 +2,7 @@ version: "3.8"
 
 services:
   zipline_web:
+    container_name: zipline_web
     build: .
     networks:
       - caddy_net
@@ -9,6 +10,7 @@ services:
 
   caddy:
     image: caddy:2.4.5
+    container_name: zipline_caddy
     ports:
       - "3001:80"
     volumes:
