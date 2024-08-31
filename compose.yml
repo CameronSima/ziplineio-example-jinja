@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  web:
+  zipline_web:
     build: .
     networks:
       - caddy_net
