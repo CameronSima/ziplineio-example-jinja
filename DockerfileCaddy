@@ -1,0 +1,7 @@
+FROM caddy:2.6
+
+COPY Caddyfile /etc/caddy/Caddyfile
+
+
+# Start the Caddy server
+CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]

@@ -8,13 +8,15 @@ services:
       - shared_network
 
   caddy:
-    image: caddy:2.4.5
+    build:
+      context: .
+      dockerfile: DockerfileCaddy
     ports:
       - "3001:80"
     volumes:
-      - ./caddy:/etc/caddy
-      - ./data:/data
-      - ./config:/config
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
     depends_on:
       - zipline_web
     networks:
@@ -26,3 +28,7 @@ networks:
     external: false
   shared_network:
     external: true
+
+volumes:
+  caddy_data:
+  caddy_config:
