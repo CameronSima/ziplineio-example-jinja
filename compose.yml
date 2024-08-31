@@ -8,12 +8,11 @@ services:
       - shared_network
 
   caddy:
-    build:
-      context: .
-      dockerfile: DockerfileCaddy
+    image: caddy:2.4.5
     ports:
       - "3001:80"
     volumes:
+      - ./caddy_files:/etc/caddy
       - caddy_data:/data
       - caddy_config:/config
     depends_on:

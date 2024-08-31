@@ -1,7 +1,0 @@
-FROM caddy:2.6
-
-COPY caddy_data caddy_data
-
-
-# Start the Caddy server
-CMD ["caddy", "run", "--config", "caddy_data/Caddyfile", "--adapter", "caddyfile"]
