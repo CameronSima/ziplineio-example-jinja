@@ -4,6 +4,8 @@ services:
   zipline_web:
     container_name: zipline_web
     build: .
+    ports:
+      - "3002:8000"
     networks:
       - caddy_net
       - shared_network
