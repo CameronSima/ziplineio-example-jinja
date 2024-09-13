@@ -2,10 +2,13 @@ from ziplineio import ZipLine
 from ziplineio.html.jinja import jinja
 from services.markdown import MarkdownService
 from services.files import FileService
-
+from routers.mailing_list import mailing_list_router
 
 import uvicorn
 from jinja2 import Environment, PackageLoader, select_autoescape
+
+from services.sqlite import init_db
+
 
 env = Environment(
     loader=PackageLoader("main"),
@@ -16,6 +19,8 @@ app = ZipLine()
 app.static("./static")
 
 app.inject([FileService, MarkdownService])
+
+app.router("/mailing_list", mailing_list_router)
 
 
 @app.get("/")
@@ -43,4 +48,5 @@ def not_found(req):
 
 
 if __name__ == "__main__":
+    init_db()
     uvicorn.run(app, host="0.0.0.0", port=8000)
